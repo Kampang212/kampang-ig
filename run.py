@@ -138,7 +138,7 @@ def login_kamu():
         ex,user=cekAPI(kuki)
         cookie={'cookie':kuki}
         instagram(ex,user,cookie).menu()
-    else:
+    
         login()
 def login():
     global external
