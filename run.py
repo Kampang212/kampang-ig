@@ -739,6 +739,3 @@ def massal(self):
             info=self.infoAPI(self.cookie,'https://i.instagram.com/api/v1/friendships/%s/followers/?count=100000',id)
             self.passwordAPI(info)
 
-if __name__=='__main__':
-    
-    
