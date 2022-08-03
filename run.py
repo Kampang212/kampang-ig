@@ -284,7 +284,7 @@ class instagram:
             except Exception as e:
                 exit(f"\n{M}┣[!] Username yang anda masukan tidak di temukan pastikan target bersifat publik{C}")
             return idx
-        else:lisensi()
+        
 
     def infoAPI(self,cookie,api,id):
         
