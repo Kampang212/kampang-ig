@@ -325,7 +325,7 @@ class instagram:
             except Exception as e:
                 print(f'\n{M}┣[!] Username yang anda masukan tidak di temukan{C}')
             return internal
-        else:
+        
 
     def passwordAPI(self,xnx):
         idtar=f'# [🐼] 𝐓𝐎𝐓𝐀𝐋 𝐈𝐃  : {len(internal)} [🐼]'
