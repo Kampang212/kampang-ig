@@ -741,6 +741,6 @@ def massal(self):
 
 if __name__=='__main__':
     try:
-        lisensi()
+       
     except requests.exceptions.ConnectionError:
         exit(f'\n [{M}!{C}] Koneksi internet bermasalah')
