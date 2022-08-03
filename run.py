@@ -66,7 +66,7 @@ N = '\x1b[0m' # WARNA MATI
 USN="Mozilla/5.0 (Linux; Android 7.0; P8_Mini Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/51.0.2704.91 Mobile Safari/537.36 Instagram 41.0.0.13.92 Android (24/7.0; 408dpi; 1080x1920; Elephone; P8_Mini; P8_Mini; mt6755; de_DE; 103516666)"
 # USN="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
 ugen=open('ua.txt','r').read().splitlines()
-internal,external,success,checkpoint,loop,following
+internal,external,success,checkpoint,loop,following=[],[],[],[],0,['sukses']
 s=requests.Session()
 # CLEAR
 def clear():
