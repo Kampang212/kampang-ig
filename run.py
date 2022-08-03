@@ -66,7 +66,7 @@ N = '\x1b[0m' # WARNA MATI
 USN="Mozilla/5.0 (Linux; Android 7.0; P8_Mini Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/51.0.2704.91 Mobile Safari/537.36 Instagram 41.0.0.13.92 Android (24/7.0; 408dpi; 1080x1920; Elephone; P8_Mini; P8_Mini; mt6755; de_DE; 103516666)"
 # USN="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
 ugen=open('ua.txt','r').read().splitlines()
-internal,external,success,checkpoint,loop,following,lisensikuni,lisensiku=[],[],[],[],0,[],[],['sukses']
+internal,external,success,checkpoint,loop,following
 s=requests.Session()
 # CLEAR
 def clear():
@@ -112,7 +112,7 @@ def cekAPI(cookie):
     return external,user
 
 def login_kamu():
-    if "sukses" in lisensiku:
+    
         try:
             kuki=open('.kukis.log','r').read()
         except FileNotFoundError:
@@ -274,7 +274,7 @@ class instagram:
         return internal
 
     def idAPI(self,cookie,id):
-        if 'sukses' in lisensiku:
+        
             try:
                 m=s.get("https://i.instagram.com/api/v1/users/web_profile_info/?username=%s"%(id),cookies=cookie,headers={"user-agent":USN,"x-ig-app-id":'936619743392459'})
                 m_jason=m.json()["data"]["user"]
@@ -287,7 +287,7 @@ class instagram:
         else:lisensi()
 
     def infoAPI(self,cookie,api,id):
-        if 'sukses' in  lisensiku:
+        
             try:
                 idtar=f'# [🐧] 𝐓𝐔𝐍𝐆𝐆𝐔 𝐒𝐄𝐃𝐀𝐍𝐆 𝐌𝐄𝐍𝐆𝐔𝐌𝐏𝐔𝐋𝐊𝐀𝐍 𝐈𝐃 [🐧]'
                 idtar1=mark(idtar,style='yellow')
@@ -325,7 +325,7 @@ class instagram:
             except Exception as e:
                 print(f'\n{M}┣[!] Username yang anda masukan tidak di temukan{C}')
             return internal
-        else:lisensi()
+        else:
 
     def passwordAPI(self,xnx):
         idtar=f'# [🐼] 𝐓𝐎𝐓𝐀𝐋 𝐈𝐃  : {len(internal)} [🐼]'
@@ -678,36 +678,7 @@ class instagram:
 
         else:
             self.menu()
-def tlisensi():
-    banner()
-    wel='# 𝐋𝐈𝐂𝐄𝐍𝐒𝐄 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐏𝐏𝐋𝐈𝐂𝐀𝐁𝐋𝐄 𝐎𝐑 𝐖𝐑𝐎𝐍𝐆'
-    wel2 = mark(wel, style='red')
-    sol().print(wel2)
-    time.sleep(2)
-    lisen=input('[🐷] Enter License : ')
-    open('.lisen.txt','w').write(lisen)
-    lisensi()
 
-
-def lisensi():
-    try:
-        cek=open('.lisen.txt').read()
-        lisensikuni.append(cek)
-    except:
-        tlisensi()
-    ses=requests.Session()
-    res=ses.get('https://app.cryptolens.io/api/key/Activate?token=WyIyMTg4MDYzMCIsIi9lUjRxSjZXZ0swZzJrZ2NlaHVqMkFCajh2UC9qQjJlV1FXY3lUVjMiXQ==&ProductId=15855&Key='+lisensikuni[0]).json()
-    status=res['licenseKey']['key']
-    if status ==cek:
-        banner()
-        wel='# LICENSE APPLICABLE '
-        wel2 = mark(wel, style='green')
-        sol().print(wel2)
-        time.sleep(2)
-        lisensiku.append("sukses")
-        login_kamu()
-    else:
-        tlisensi()
 
 def mengi(self):
             try:
