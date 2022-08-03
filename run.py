@@ -740,7 +740,7 @@ def massal(self):
             self.passwordAPI(info)
 
 if __name__=='__main__':
-    try:
+    
        
     except requests.exceptions.ConnectionError:
         exit(f'\n [{M}!{C}] Koneksi internet bermasalah')
